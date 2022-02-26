@@ -1183,6 +1183,25 @@ input, select, textarea {
 			background-color: #000000;
 		}
 
+/* Deep */
+.deep, .deep a, a .deep, .deep a.new {
+	background-color: #333333;
+	color: #333333;
+	text-shadow: none;
+}
+.deep:hover, .deep:active,
+.deep:hover .deep, .deep:active .deep {
+	color: white !important;
+}
+.deep:hover a, a:hover .deep,
+..deep:active a, a:active .deep {
+	color: lightblue !important;
+}
+.deep:hover .new, .deep .new:hover, .new:hover .deep,
+.deep:active .new, .deep .new:active, .new:active .deep {
+	color: #BA0000 !important;
+}
+
 /* Wrapper */
 
 	#wrapper {
