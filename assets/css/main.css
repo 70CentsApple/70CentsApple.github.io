@@ -1185,13 +1185,14 @@ input, select, textarea {
 
 /* Deep */
 .deep, .deep a, a .deep, .deep a.new {
-	background-color: #333333;
-	color: #333333;
+	background-color: #eeeeee;
+	color: #eeeeee;
+	border-radius: 4px;
 	text-shadow: none;
 }
 .deep:hover, .deep:active,
 .deep:hover .deep, .deep:active .deep {
-	color: white !important;
+	color: #212121 !important;
 }
 .deep:hover a, a:hover .deep,
 ..deep:active a, a:active .deep {
