@@ -1,8 +1,8 @@
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600");
-@import url(ResourceHanRoundedCN-Medium.ttf);
 @import url("https://fonts.googleapis.com/css?family=JetBrains+Mono:300italic,600italic,300,600");
-@import url(JetBrainsMono-Regular.ttf)
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+SC:300italic,600italic,300,600");
+
 
 /*
 	Dimension by HTML5 UP
@@ -144,7 +144,7 @@ input, select, textarea {
 
 	body, input, select, textarea {
 		color: #ffffff;
-		font-family: "Resource Han Rounded CN Medium", sans-serif;
+		font-family: "Noto Sans SC", sans-serif;
 		font-weight: 300;
 		font-size: 1rem;
 		line-height: 1.65;
@@ -265,7 +265,7 @@ input, select, textarea {
 	code {
 		background: rgba(255, 255, 255, 0.075);
 		border-radius: 4px;
-		font-family: "JetBrains Mono Regular", monospace;
+		font-family: "JetBrains Mono", monospace;
 		font-size: 0.9rem;
 		margin: 0 0.25rem;
 		padding: 0.25rem 0.65rem;
@@ -273,7 +273,7 @@ input, select, textarea {
 
 	pre {
 		-webkit-overflow-scrolling: touch;
-		font-family: "JetBrains Mono Regular", monospace;
+		font-family: "JetBrains Mono", monospace;
 		font-size: 0.9rem;
 		margin: 0 0 2rem 0;
 	}
@@ -1182,6 +1182,26 @@ input, select, textarea {
 		body.is-preload #bg:before {
 			background-color: #000000;
 		}
+
+/* Deep */
+.deep, .deep a, a .deep, .deep a.new {
+	background-color: #eeeeee;
+	color: #eeeeee;
+	border-radius: 2px;
+	text-shadow: none;
+}
+.deep:hover, .deep:active,
+.deep:hover .deep, .deep:active .deep {
+	color: #212121 !important;
+}
+.deep:hover a, a:hover .deep,
+..deep:active a, a:active .deep {
+	color: lightblue !important;
+}
+.deep:hover .new, .deep .new:hover, .new:hover .deep,
+.deep:active .new, .deep .new:active, .new:active .deep {
+	color: #BA0000 !important;
+}
 
 /* Wrapper */
 
