@@ -14,6 +14,7 @@
 		<link rel="shortcut icon" href="icon.ico" type="image/vnd.microsoft.icon">
 		<link href="assets/css/remixicon.css" rel="stylesheet">
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<span id="bgmusic"></span>
 	</head>
 	<body class="is-preload">
 
@@ -23,7 +24,7 @@
 				<!-- Header -->
 					<header id="header">
 						<div class="logo">
-							<span class="icon remixicon ri-bilibili-line" title="是Bilibili小电视捏"></span>
+							<span id="headLogo"></span>
 						</div>
 						<div class="content">
 							<div class="inner">
@@ -90,10 +91,7 @@
 									<p>七毛钱摘自朱自清《生命的价格——七毛钱》<blockquote>将一条生命的自由和七枚小银元各放在天平的一个盘里，您将发见，正如九头牛与一根牛毛一样，两个盘儿的重量相差实在太远了！</blockquote></p>
 									而苹果纯粹就是因为我起名时看到了个苹果，所以由此得名<span class="deep">（太敷衍了吧</span></p>
 									
-								<h2 class="major">最后</h2>
-									<p>很喜欢我自己说过的一句话：
-									<blockquote>他谦虚，不意味着他想被人看不起；<br>他沉默，不代表说他甘愿被人否定。<br>虽说“人不知而不愠”，<br>但<span class="deep" title="最后的倔强">情商低实在令人不高兴</span>。</blockquote>
-							</article>
+								</article>
 							
 						<!-- Mail -->
 							<article id="mail">
@@ -101,7 +99,17 @@
 								<p>Chris48@qq.com</br>
 								<a href="mailto:Chris48@qq.com">点击这里使用Outlook等邮箱应用打开</a></p>
 							</article>
-
+							
+						<!-- BGMusic -->
+							<article id="bgmusic">
+								<h2 class="major">本站提供背景音乐！</h2>
+								<p>需不需要来首音乐一边欣赏一边浏览呢？(•ᵕ•๑)</br>
+								<ul class="actions">
+									<li><a href="#" class="button primary" onclick='setCookie("music",1,30)'>好耶 \·v·/</a></li>
+									<li><a href="#" class="button" onclick='setCookie("music",0,30)'>不要-n-</a></li>
+								</ul>
+							</article>
+							
 						<!-- Rickroll -->
 							<article id="goodstuff">
 									<ul class="actions">
@@ -379,17 +387,11 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script src="assets/js/instantclick-1.2.2.js" type="module"></script>
-			<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 			
+			<script src="assets/js/applelib.js"></script>
 			<script type="text/javascript">
-			window.onload=function lastTime(){
-				var s1 = '2022-3-5';
-				s1 = new Date(s1.replace(/-/g, "/"));
-				s2 = new Date();
-				var days = s2.getTime() - s1.getTime();
-				var time = parseInt(days / (1000 * 60 * 60 * 24));
-				document.getElementById("lastTime").innerHTML=time;
-			}
+			window.onload = document.getElementById("lastTime").innerHTML = lastTime('2022/3/14 14:15'); <!-- 调用lastTime()输出到网页上 -->
+			window.onload = bgMusic(); <!-- 背景音乐 -->
 			</script>
 			
 	</body>

@@ -46,5 +46,6 @@
 .ri-qq-line:before { content: "\f03b"; }
 .ri-twitter-line:before { content: "\f23b"; }
 .ri-mail-send-line:before { content: "\eefc"; }
-.ri-pixiv:before { content: "\fefe"; }
-
+.ri-pixiv:before { content: "\eac1"; }
+.ri-headphone-line:before { content: "\eac2"; }
+.ri-headphone-fill:before { content: "\eac3"; }
