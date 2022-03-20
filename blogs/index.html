@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta charset="UTF-8">
+	<link rel="shortcut icon" href="../icon.ico" type="image/vnd.microsoft.icon">
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/vue.css">
+</head>
+
+<body>
+	<nav>
+		<a href="../../">主页</a>
+	</nav>
+
+	<div id="app">加载中( つ•̀ω•́)つ</div>
+
+	<script>
+		window.$docsify = {
+			loadSidebar: true, //自定义侧边栏
+			loadNavbar: true, //自定义导航栏（右上角）
+			subMaxLevel: 2, //自动生成侧边栏的嵌套深度
+			auto2top: true, //切换页面自动滚到顶部
+			name: '<b>70CentsApple</b>', //侧边栏最上方标题
+			autoHeader: true, //根据 _sidebar.md 的内容自动为每个页面增加标题
+
+			copyCode: {
+				buttonText: "复制到剪切板",
+				errorText: "复制失败",
+				successText: "成功复制",
+			},
+
+			count: {
+				countable: true,
+				fontsize: '0.9rem',
+				color: 'rgb(90,90,90)',
+				language: 'chinese'
+			},
+			pagination: {
+				previousText: "上一篇",
+				nextText: "下一篇",
+				crossChapter: true,
+				crossChapterText: true,
+			}
+		}
+	</script>
+	<script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+	<script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+	<script src="//cdn.jsdelivr.net/npm/docsify-count@latest/dist/countable.min.js"></script>
+	<script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+</body>
+
+</html>
