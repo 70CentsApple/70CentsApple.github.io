@@ -35,15 +35,22 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
             <div class="content">
                 <div class="inner">
                     <h1 style='font-family: "JetBrains Mono";letter-spacing: 0.2rem;'>70CENTSAPPLE</h1>
-                    <p>B站实时粉丝数：<a href="https://space.bilibili.com/442361724" target="_blank"><img
+                    <p>B站实时粉丝数：<a href="https://space.bilibili.com/442361724" target="_blank"><span
+                                id="BilibiliFollowers">~</span>
+                            <!--
+                            <img
                             src="https://img.shields.io/badge/dynamic/json?color=00AF5C&style=&label=&query=%24.data.follower&url=https://api.bilibili.com/x/relation/stat?vmid=442361724"
-                            style="position:relative;top:0.25rem;" alt="" /></a>
+                            style="position:relative;top:0.25rem;" alt="" />
+                        -->
+                        </a>
                     </p>
-                    <p>Chat Tools实时下载数：<a href="https://modrinth.com/mod/chat-tools" target="_blank">
-                            <span id="ChatToolsDownloads">~</span>
-                        <!-- <img
+                    <p>Chat Tools实时下载数：<a href="https://modrinth.com/mod/chat-tools" target="_blank"><span
+                                id="ChatToolsDownloads">~</span>
+                            <!--
+                            <img
                             src="https://img.shields.io/modrinth/dt/pbnlOdwp?color=00AF5C&label="
-                            style="position:relative;top:0.25rem;" alt="" />-->
+                            style="position:relative;top:0.25rem;" alt="" />
+                        -->
                         </a>
                     </p>
                 </div>
@@ -94,7 +101,8 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                     <li>生日：<code>08 / 07</code></li>
                     <li>爱吃：<code>洋葱、松子</code></li>
                     <li>想干：<code>写一个更nb的MC模组、<span class="deep" title="啊这">封熙Fxiii</span></code></li>
-                    <li>在干：<code>维护 <a href="https://github.com/70CentsApple/ChatTools" target="_blank">Chat Tools</a> 模组</code></li>
+                    <li>在干：<code>维护 <a href="https://github.com/70CentsApple/ChatTools" target="_blank">Chat Tools</a> 模组</code>
+                    </li>
                     <li>在玩：<code>Minecraft、Horizon 5</code>
                     <li>Minecraft昵称：<code>70CentsApple</code></li>
                     <li>联系方式：<code><a href="#contact">戳这里</a></code>，<i>欢迎加QQ一起聊呀</i> (^ω^)/</li>
@@ -120,7 +128,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
             <article id="bgm">
                 <h2 class="major">本站提供背景音乐！</h2>
                 <p>需不需要来首音乐一边欣赏一边浏览呢？(•o•๑)</br>
-                目前共有 <span id="musicLength">好多</span> 首歌曲参与随机播放 (^·Δ·^)</p>
+                    目前共有 <span id="musicLength">好多</span> 首歌曲参与随机播放 (^·Δ·^)</p>
                 <ul class="actions">
                     <li><a href="#" class="button primary" onclick='playMusic(initMusic=1)'>好耶 (≧∇≦)</a></li>
                     <li><a href="#" class="button" onclick='stopMusic()'>不要 ⩌⩊⩌</a></li>
@@ -432,8 +440,17 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
     <script type="text/javascript">
         fetch("https://api.modrinth.com/v2/project/pbnlOdwp")
             .then(Response => Response.json())
-            .then(data => document.getElementById("ChatToolsDownloads").innerText=data['downloads'])
+            .then(data => document.getElementById("ChatToolsDownloads").innerText = data['downloads'])
             .catch(error => console.error(error))
+    </script>
+    <script>
+        // JSONP跨域小技巧
+        function RefreshBilibiliFollowers(d) {
+            document.getElementById('BilibiliFollowers').innerText = d['data']['follower'];
+        }
+        var script = document.createElement('script');
+        script.src = 'https://json2jsonp.com/?callback=RefreshBilibiliFollowers&url=https%3A%2F%2Fapi.bilibili.com%2Fx%2Frelation%2Fstat%3Fvmid%3D442361724';
+        document.body.appendChild(script);
     </script>
 
 </body>
