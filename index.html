@@ -39,9 +39,12 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                             src="https://img.shields.io/badge/dynamic/json?color=00AF5C&style=&label=&query=%24.data.follower&url=https://api.bilibili.com/x/relation/stat?vmid=442361724"
                             style="position:relative;top:0.25rem;" alt="" /></a>
                     </p>
-                    <p>Chat Tools实时下载数：<a href="https://modrinth.com/mod/chat-tools" target="_blank"><img
+                    <p>Chat Tools实时下载数：<a href="https://modrinth.com/mod/chat-tools" target="_blank">
+                            <div id="ChatToolsDownloads">~</div>
+                        <!-- <img
                             src="https://img.shields.io/modrinth/dt/pbnlOdwp?color=00AF5C&label="
-                            style="position:relative;top:0.25rem;" alt="" /></a>
+                            style="position:relative;top:0.25rem;" alt="" />-->
+                        </a>
                     </p>
                 </div>
             </div>
@@ -425,6 +428,12 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
     <script src="assets/js/applelib.js"></script>
     <script type="text/javascript">
         window.onload = window.location.href = "#bgm";
+    </script>
+    <script type="text/javascript">
+        fetch("https://api.modrinth.com/v2/project/pbnlOdwp")
+            .then(Response => Response.json())
+            .then(data => document.getElementById("ChatToolsDownloads").innerHTML=data['downloads'])
+            .catch(error => console.error(error))
     </script>
 
 </body>
