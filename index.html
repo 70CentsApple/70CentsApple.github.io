@@ -40,7 +40,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
                             style="position:relative;top:0.25rem;" alt="" /></a>
                     </p>
                     <p>Chat Tools实时下载数：<a href="https://modrinth.com/mod/chat-tools" target="_blank">
-                            <div id="ChatToolsDownloads">~</div>
+                            <span id="ChatToolsDownloads">~</span>
                         <!-- <img
                             src="https://img.shields.io/modrinth/dt/pbnlOdwp?color=00AF5C&label="
                             style="position:relative;top:0.25rem;" alt="" />-->
@@ -432,7 +432,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
     <script type="text/javascript">
         fetch("https://api.modrinth.com/v2/project/pbnlOdwp")
             .then(Response => Response.json())
-            .then(data => document.getElementById("ChatToolsDownloads").innerHTML=data['downloads'])
+            .then(data => document.getElementById("ChatToolsDownloads").innerText=data['downloads'])
             .catch(error => console.error(error))
     </script>
 
